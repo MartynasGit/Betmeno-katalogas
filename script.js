@@ -1,5 +1,5 @@
 let page = 1;
-let adresas = `http://www.omdbapi.com/?apikey=52cf66a0&s=Batman&page=${page}`
+let adresas = `https://www.omdbapi.com/?apikey=52cf66a0&s=Batman&page=${page}`
 const filmai = document.querySelector('.filmai')
 const sekantis = document.querySelector('.sekantis')
 const esamas = document.querySelector('.esamas')
@@ -31,13 +31,13 @@ function patikra(page){
 }
 function pirmyn() {
     page++
-    adresas = `http://www.omdbapi.com/?apikey=52cf66a0&s=Batman&page=${page}`
+    adresas = `https://www.omdbapi.com/?apikey=52cf66a0&s=Batman&page=${page}`
     esamas.textContent = "Esamas puslapis: " + page;
     init(adresas);
 }
 function atgal() {
     page > 1 && page--;
-    adresas = `http://www.omdbapi.com/?apikey=52cf66a0&s=Batman&page=${page}`
+    adresas = `https://www.omdbapi.com/?apikey=52cf66a0&s=Batman&page=${page}`
     esamas.textContent = "Esamas puslapis: " + page;
     init(adresas)
 }
