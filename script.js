@@ -6,9 +6,14 @@ const esamas = document.querySelector('.esamas')
 const ankstesnis = document.querySelector('.ankstesnis')
 
 const getData = async (adresas) => {
+    try{
     let response = await fetch(adresas);
     let json = await response.json()
     return json.Search;
+    }
+    catch{
+        console.log('Klaida fetchinat')
+    }
 }
 function patikra(page){
     if(page == 1 ){
