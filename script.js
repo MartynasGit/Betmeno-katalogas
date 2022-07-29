@@ -52,5 +52,5 @@ const init = async (adresas) => {
     }
 
 }
-init(adresas)
 sekantis.addEventListener('click', pirmyn)
+init(adresas)
