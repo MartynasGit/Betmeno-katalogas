@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+div img{
+    width: 227px;
+    height: 337px;
+}
+.filmai{
+    display: grid;
+    grid-template-columns: repeat(5, 227px);
+    grid-template-rows: repeat(2, 25vw);
+    grid-gap: 35px;
+}
+.title{
+    font-size: 32px;
+    color: #fac650;
+    font-family: 'Press Start 2P', cursive;
+}
+.btn:focus {
+    box-shadow: none;
+  }
