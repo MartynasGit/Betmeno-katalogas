@@ -16,17 +16,15 @@ const getData = async (adresas) => {
     }
 }
 function patikra(page){
-    if(page == 1 ){
-        ankstesnis.classList.add('btn-secondary')
-        // ankstesnis.classList.add('disabled')
-        ankstesnis.classList.remove('btn-warning');
-        ankstesnis.removeEventListener('click', () => console.log(veikia))
+    if(page === 1 ){
+        ankstesnis.classList.add('disabled')
+    }
+    if(page === 52){
+         sekantis.classList.add('disabled')
     }
     else{
-        ankstesnis.classList.remove('btn-secondary')
-        // ankstesnis.classList.remove('disabled')
-        ankstesnis.classList.add('btn-warning')
-        ankstesnis.addEventListener('click', atgal)
+        sekantis.classList.remove('disabled')
+        ankstesnis.classList.remove('disabled')
     }
 }
 function pirmyn() {
@@ -48,7 +46,7 @@ const init = async (adresas) => {
     console.log(sar)
     filmai.innerHTML = ""
     for (let i = 0; i < 10; i++){
-        filmai.innerHTML += `<div class="text-center my-2">
+        filmai.innerHTML += `<div class="text-center my-1">
                             <img src="${sar[i].Poster}"></img>
                             <span class="text-center d-block">${sar[i].Title}</span>
                             <span class="text-center">${sar[i].Year}</span>
@@ -57,5 +55,6 @@ const init = async (adresas) => {
     }
 
 }
+ankstesnis.addEventListener('click', atgal)
 sekantis.addEventListener('click', pirmyn)
 init(adresas)
