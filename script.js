@@ -7,12 +7,12 @@ const ankstesnis = document.querySelector('.ankstesnis')
 
 const getData = async (adresas) => {
     try{
-    let response = await fetch(adresas);
-    let json = await response.json()
-    return json.Search;
+        let response = await fetch(adresas);
+        let json = await response.json()
+        return json.Search;
     }
     catch{
-        console.log('Klaida fetchinat')
+         return console.log('Klaida fetchinat');
     }
 }
 function patikra(page){
