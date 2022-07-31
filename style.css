@@ -15,7 +15,7 @@ div img{
 .title{
     font-size: 32px;
     color: #fac650;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P';
 }
 .btn:focus {
     box-shadow: none;

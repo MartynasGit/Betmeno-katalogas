@@ -18,17 +18,20 @@ const getData = async (adresas) => {
 function patikra(page){
     if(page === 1 ){
         ankstesnis.classList.add('disabled')
+        return;
     }
     if(page === 52){
          sekantis.classList.add('disabled')
+         return;
     }
     else{
         sekantis.classList.remove('disabled')
         ankstesnis.classList.remove('disabled')
+        return;
     }
 }
 function pirmyn() {
-    page++
+    page < 53 && page++
     adresas = `https://www.omdbapi.com/?apikey=52cf66a0&s=Batman&page=${page}`
     esamas.textContent = "Esamas puslapis: " + page;
     init(adresas);
@@ -43,7 +46,6 @@ function atgal() {
 const init = async (adresas) => {
     patikra(page)
     let sar =  await getData(adresas)
-    console.log(sar)
     filmai.innerHTML = ""
     for (let i = 0; i < 10; i++){
         filmai.innerHTML += `<div class="text-center my-1">
